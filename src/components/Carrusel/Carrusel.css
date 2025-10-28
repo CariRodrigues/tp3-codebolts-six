@@ -1,0 +1,75 @@
+.container-carrusel {
+  padding: 20px;
+  margin-top: 1rem;
+}
+
+.carrusel {
+  display: flex;
+  position: relative;
+  max-width: 600px;
+  margin: 50px auto;
+  overflow: hidden;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px var(--color-encabezado);
+  justify-content: center;
+}
+
+.carrusel-imagenes {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  transition: transform 0.5s ease-in-out;  
+}
+.caption{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+}
+.carrusel-imagenes img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  /* evita que se reduzcan */
+}
+.btn{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: var(--color-fondo);
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0 0.5rem;
+  border-radius: 20%;
+  transition:  0.3s ease;
+}
+.btn:hover{
+    background-color: var(--color-encabezado);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+@media (max-width: 900px) and (min-width: 401px) {
+
+  .carrusel{
+    max-width: 250px;
+  }
+  .carrusel-imagenes{
+    max-height: 300px;
+  }
+}
+

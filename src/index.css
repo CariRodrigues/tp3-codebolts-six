@@ -1,0 +1,46 @@
+/* || IMPORTAR FUENTES DE GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+/* || VARIABLES */
+:root {
+    /* || VARIABLES DE COLORES */
+    --color-primary-text: #222;
+    --color-secondary-text: #7f8c8d;
+    --color-background-body: #C4CFCC;
+    --color-background-section: white;
+    --color-background-navbar: rgba(40, 75, 99, 0.5);
+    --color-background-navbar-solid: rgb(40, 75, 99);
+    --color-heading: #2c3e50;
+    --color-accent: #3498db;
+    --color-light-gray: #ccc;
+    --color-white: #FFFFFF;
+    --color-white-yellow: #ebe592;
+    --color-white-yellow-2: #99942f;
+    --backgraund-color-black: #1e1e1e;
+
+    /* || VARIABLE DE FONTS */
+    --font-primary: 'Open Sans', sans-serif;
+    --font-secondary: 'Playfair Display', serif;
+
+    /* || FONT SIZE */
+    --font-size-sm: 0.875rem;
+    /* 14px */
+    --font-size-md: 1rem;
+    /* 16px */
+    --font-size-lg: 1.25rem;
+    /* 20px */
+    --font-size-xl: 1.5rem;
+    /* 24px */
+
+    /* || VARIABLE DE TAMAÑOS */
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 30px;
+    --spacing-xl: 2rem;
+    --spacing-nav: 1.5rem;
+
+    /* || VARIABLE DE ESTILO */
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --text-shadow: 0 0px 10px rgba(198, 230, 56, 0.458);
+}

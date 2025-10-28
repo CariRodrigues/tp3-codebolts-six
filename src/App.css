@@ -1,0 +1,101 @@
+.app-container {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) calc(100% - var(--sidebar-width)); 
+  height: 100vh;
+  overflow-x: hidden;
+  transition: transform 0.3s ease; /* para animar cuando se mueva */
+}
+.sidebar {
+  grid-column: 1 / 2;
+}
+
+.main-content {
+  grid-column: 2 / 3;
+  padding: 0;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: transform 0.3s ease;
+}
+/* Make the navigation fill the space */
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* fills the available height */
+}
+
+/* Push the DarkModeButton to the bottom */
+.nav-links > :last-child {
+  margin: auto 0 20px 0; 
+} 
+
+/* Fondo para modo claro */
+body {
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Fondo para modo oscuro */
+body.dark-mode {
+  background-color: var(--color-background-body-dark);
+  color: #f1f1f1;
+}
+
+.rayo-flash {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: auto;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  z-index: 9999;
+  animation: lightning-strike 0.9s ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes lightning-strike {
+  0% { opacity: 0; transform: translate(-50%, -200%) scale(0.5); }
+  30% { opacity: 1; transform: translate(-50%, 0%) scale(1.2); }
+  60% { opacity: 1; transform: translate(-50%, 20%) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, 100%) scale(0.5); }
+}
+
+@media (max-width: 900px){
+  .app-container {
+    display: block;
+    position: relative;
+  }
+  .main-content{
+     width: 100vw;
+     transition: transform 0.3s ease;
+  }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--sidebar-width);
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+   .sidebar.open {
+    transform: translateX(0);
+  }
+  .app-container.sidebar-open .main-content {
+     transform: translateX(var(--sidebar-width));
+     transition: transform 0.3s ease;
+  }
+  .main-content{
+    transition: transform 0.3s ease;
+  }
+ .header{
+  width: 50%;
+ }
+  .header-right{
+    position: absolute;
+  }
+  
+}

@@ -1,0 +1,34 @@
+.Footer {
+  grid-area: footer;
+  width: var(--section-width);
+  height: 50px;
+  text-align: center;
+  background-color: var(--color-encabezado);
+  color: var(--color-fondo-claro);
+  display: flex;            
+  align-items: center;      
+  justify-content: center;  
+
+  p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}
+
+@media (max-width:400px){
+  .Footer{
+    width: 100vw;
+  }
+  .Footer p{
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 900px) and (min-width: 401px) {
+  .Footer{
+    width: 100vw;
+  }
+  .Footer p{
+    font-size: 0.8rem;
+  }
+}

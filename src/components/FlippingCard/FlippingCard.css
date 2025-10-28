@@ -1,0 +1,103 @@
+.card-container {
+    width: 260px;
+    height: 360px;
+    perspective: 1000px;
+    margin: 20px auto;
+}
+
+.flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+    border-radius: 16px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+    background: #fdfdfd;
+}
+
+.card-container:hover .flip-card {
+    transform: rotateY(180deg);
+}
+
+/* FRONT SIDE */
+.card-front,
+.card-back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    text-align: center;
+    padding: 1rem;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.card-front {
+    border: #ffca28 4px solid;
+    gap: 2rem;
+}
+
+.character-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgb(255, 247, 25);
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.logo-simpsons {
+    width: 100%;
+    max-width: 130px;
+    height: auto;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+}
+
+
+/* BACK SIDE */
+.card-back {
+    background: linear-gradient(160deg, #ffea00, #ffca28);
+    color: #333;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    gap: 0.5rem;
+    border: #ffca28 4px solid;
+}
+
+.card-back h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+.card-back p {
+    margin: 5px 0;
+}
+
+.card-back .phrase {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #444;
+    margin-top: 5px;
+}
+
+/* Loading state */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #777;
+    font-family: "Poppins", sans-serif;
+    height: 360px;
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "titulo": "Cataratas del Iguazú",
+    "subtitulo": "Misiones",
+    "img": "iguazu.webp"
+  },
+  {
+    "id": 2,
+    "titulo": "Mar del Plata",
+    "subtitulo": "Buenos Aires",
+    "img": "mardelplata.webp"
+  },
+  {
+    "id": 3,
+    "titulo": "Sierra de la Ventana",
+    "subtitulo": "Buenos Aires",
+    "img": "sierradelaventana.webp"
+  },
+  {
+    "id": 4,
+    "titulo": "Tandil",
+    "subtitulo": "Buenos Aires",
+    "img": "tandil.webp"
+  },
+  {
+    "id": 5,
+    "titulo": "Mina Clavero",
+    "subtitulo": "Córdoba",
+    "img": "minaclavero.webp"
+  },
+  {
+    "id": 6,
+    "titulo": "Villa Carlos Paz",
+    "subtitulo": "Córdoba",
+    "img": "carlospaz.webp"
+  },
+  {
+    "id": 7,
+    "titulo": "San Carlos de Bariloche",
+    "subtitulo": "Río Negro",
+    "img": "bariloche.webp"
+  },
+  {
+    "id": 8,
+    "titulo": "Esquel",
+    "subtitulo": "Chubut",
+    "img": "esquel.webp"
+  },
+  {
+    "id": 9,
+    "titulo": "Trevelin",
+    "subtitulo": "Río Negro",
+    "img": "trevelin.webp"
+  },
+  {
+    "id": 10,
+    "titulo": "Ushuaia",
+    "subtitulo": "Tierra del Fuego",
+    "img": "ushuaia.webp"
+  },
+  {
+    "id": 11,
+    "titulo": "Santa Teresita",
+    "subtitulo": "Buenos Aires",
+    "img": "stateresita.webp"
+  },
+  {
+    "id": 12,
+    "titulo": "El Bolsón",
+    "subtitulo": "Río Negro",
+    "img": "bolson.webp"
+  },
+  {
+    "id": 13,
+    "titulo": "Miramar",
+    "subtitulo": "Buenos Aires",
+    "img": "miramar.webp"
+  },
+  {
+    "id": 14,
+    "titulo": "Lobos",
+    "subtitulo": "Buenos Aires",
+    "img": "lobos.webp"
+  },
+  {
+    "id": 15,
+    "titulo": "San Rafael",
+    "subtitulo": "Mendoza",
+    "img": "sanrafael.webp"
+  },
+  {
+    "id": 16,
+    "titulo": "Perito Moreno",
+    "subtitulo": "Santa Cruz",
+    "img": "peritomoreno.webp"
+  },
+  {
+    "id": 17,
+    "titulo": "El Chaltén",
+    "subtitulo": "Santa Cruz",
+    "img": "chalten.webp"
+  },
+  {
+    "id": 18,
+    "titulo": "Puerto Madryn",
+    "subtitulo": "Chubut",
+    "img": "puertomadryn.webp"
+  },
+  {
+    "id": 19,
+    "titulo": "Cafayate",
+    "subtitulo": "Salta",
+    "img": "cafayate.webp"
+  },
+  {
+    "id": 20,
+    "titulo": "Quebrada de Humahuaca",
+    "subtitulo": "Jujuy",
+    "img": "humahuaca.webp"
+  }
+]

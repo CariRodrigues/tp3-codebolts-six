@@ -1,0 +1,15 @@
+.divisor-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--color-fondo);
+  color: var(--color-secundario);
+}
+
+.linea {
+  flex: 1;
+  height: 1px;
+  background-color: var(--color-secundario);
+  max-width: 35%;
+}

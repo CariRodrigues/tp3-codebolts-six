@@ -1,0 +1,37 @@
+.member-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  padding: 0.3rem;
+  color: var(--color-fondo);
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.member-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.member-img-container {
+  width: 25%;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 1.5rem;
+  
+}
+
+.member-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.member-name {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}

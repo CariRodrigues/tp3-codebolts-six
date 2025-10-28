@@ -1,0 +1,110 @@
+header {
+    /* background: url("../src/assets/eduardo/eduardo_header.webp") no-repeat center top; */
+    background-size: cover;
+    width: calc(100vw - var(--sidebar-width));
+    height: 100vh;
+    /* overflow-x: hidden; */
+    background-position: center;
+    position: relative;
+    grid-area: header;
+}
+
+.header-information {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.header-left {
+    margin: 0 0.8rem;
+    padding: 1.5rem 1rem;
+    align-self: flex-end;
+}
+
+.name {
+    font-family: var(--font-primary);
+    font-size: 4rem;
+    margin: 0;
+    color: var(--color-white-yellow);
+}
+
+.lastname {
+    font-family: var(--font-primary);
+    font-size: 6rem;
+    font-weight: bold;
+    margin: 0;
+    color: var(--color-white-yellow);
+
+}
+
+.header-right {
+    margin: 3rem 0.8rem;
+    padding: 1.5rem 1rem;
+    align-self: center;
+}
+
+
+.city-container {
+    position: relative;
+    text-align: center;
+}
+
+@keyframes spin {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.sun_icon {
+    background: url("../img/eduardo/sun.webp") no-repeat center;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12rem;
+    height: 12rem;
+    animation: spin 10s linear infinite;
+}
+
+
+.city {
+    font-family: var(--font-primary);
+    font-size: 3.2rem;
+    font-weight: bold;
+    margin: 0 0 3rem 0;
+    color: var(--color-white);
+    text-shadow: 0 0 10px var(--color-white-yellow-2);
+    position: relative;
+    z-index: 1;
+}
+
+.age_number {
+    font-family: var(--font-primary);
+    font-size: 8rem;
+    font-weight: bold;
+    margin: 6rem 4rem 10rem 0;
+    color: var(--color-white-yellow);
+}
+
+.age_years {
+    font-size: 4rem;
+}
+
+@media (max-width: 900px){
+  header{
+    width: 100vw;
+  }
+
+  
+  .age_years , .age_number, .city{
+    font-size: 2rem;
+  }
+  .name, .lastname{
+    font-size: 3rem;
+  }
+}
