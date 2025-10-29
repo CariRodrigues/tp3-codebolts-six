@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import rayo from '../../../public/rayo.png';
+import rayo from '@/assets/rayo.png';
 
 export default function PageTransition({ children }) {
   const [flash, setFlash] = useState(false);
