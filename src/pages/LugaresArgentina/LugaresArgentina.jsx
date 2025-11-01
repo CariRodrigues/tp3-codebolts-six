@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import Footer from '@/components/Footer/Footer';
 import Card from '@/components/Card/Card';
 import ScrollToTopBtn from '@/components/ScrollToTopButton/ScrollToTopButton';
+import SearchBar from '@/components/SearchBar/SearchBar';
 
 export default function LugaresArgentina() {
   const { isDarkMode } = useTheme();
@@ -34,15 +35,25 @@ export default function LugaresArgentina() {
     marginBottom: '1rem'
   };
 
-  // Estados para cargar lugares
+  // Estado de los lugares
   const [lugares, setLugares] = useState([]);
 
+  // Estado de búsqueda
+  const [searchTerm, setSearchTerm] = useState("");
+
+  // Cargar lugares desde JSON
   useEffect(() => {
     fetch('/data/lugares.json')
       .then(res => res.json())
       .then(data => setLugares(data))
       .catch(err => console.error("Error cargando lugares:", err));
   }, []);
+
+  // Filtrar lugares según el término de búsqueda
+  const lugaresFiltrados = lugares.filter(lugar =>
+    lugar.titulo.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    lugar.subtitulo.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div className='main'>
@@ -62,12 +73,20 @@ export default function LugaresArgentina() {
           Estos son algunos de los lugares turísticos más hermosos de la Argentina. Cada tarjeta muestra el nombre del destino y la provincia a la que pertenece.
         </p>
         <p style={paragraphStyle}>
-          Los datos se cargan dinámicamente desde un recurso JSON y se representan en tarjetas interactivas mediante el manejo de estado y el mapeo de componentes en React. Cada elemento del JSON se procesa para generar un componente individual, aplicando propiedades como imagen, título y subtítulo, lo que permite un renderizado consistente y reutilizable en toda la interfaz.
+          Los datos se cargan dinámicamente desde un recurso JSON y se representan en tarjetas interactivas mediante el manejo de estado y el mapeo de componentes en React.
         </p>
 
+        <SearchBar
+          placeholder="Buscar lugar..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+
         <div className="file-tree-wrapper">
-          {lugares.length > 0 ? (
-            lugares.map((lugar) => (
+          {lugares.length === 0 ? (
+            <p>Cargando lugares...</p>
+          ) : lugaresFiltrados.length > 0 ? (
+            lugaresFiltrados.map((lugar) => (
               <Card
                 key={lugar.id}
                 resource={`/assets/lugares/${lugar.img}`}
@@ -78,7 +97,7 @@ export default function LugaresArgentina() {
               />
             ))
           ) : (
-            <p>Cargando lugares...</p>
+            <p>No se encontraron lugares que coincidan con la búsqueda.</p>
           )}
         </div>
       </div>
