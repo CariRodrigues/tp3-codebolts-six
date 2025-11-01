@@ -1,7 +1,7 @@
 
 ---
 
-# Codebolts Six - TP2 React
+# Codebolts Six - TP3 React
 ## Tecnicatura Superior en Desarrollo de Software - IFTS29
 ### Trabajo Práctico Grupal 2: Proyecto React en Equipo
 
