@@ -202,6 +202,41 @@ Principales mejoras:
 **Filtrado**
 ![Lugares The Simpsons](/public/assets/screenshots/captura_simpsons_despues02.png)
 
+Perfecto, Ezequiel 👌
+Entonces hay que ajustar la redacción del punto 3 para que refleje que se trata de **una nueva incorporación al proyecto**, no una mejora sobre algo previo.
+Te dejo la versión revisada y coherente con el estilo de las otras secciones de tu README:
+
+
+### **3. Nueva barra de habilidades (SkillProgressBar)**
+
+#### **Descripción:**
+
+Se implementó un nuevo componente **SkillProgressBar** para mostrar de forma visual y animada las habilidades técnicas principales en la página de cada integrante del equipo.
+El componente se integra completamente con el sistema de temas (`ThemeContext`), manteniendo coherencia con el diseño del sitio y reutilizando los componentes globales **Title** y **Line** de la estructura `Section`.
+
+La animación de las barras se activa dinámicamente mediante **Intersection Observer API**, iniciando el llenado solo cuando el usuario desplaza la vista hasta la sección correspondiente.
+Cada barra se representa con un color degradado único según la tecnología, y su longitud refleja el nivel de dominio en porcentaje.
+
+Principales características:
+
+* **Nueva funcionalidad visual** para representar habilidades técnicas.
+* **Integración completa con el modo oscuro** y con el sistema de componentes globales.
+* **Animación progresiva controlada** con Intersection Observer para mejor rendimiento.
+* **Diseño responsivo y minimalista**, sin sombras ni recuadros.
+* **Colores personalizados por tecnología** (Java, JavaScript, React, Python, HTML/CSS, etc.).
+
+
+#### **Vista del componente:**
+
+#### **Antes:**
+![Antes Sin Skills](/public/assets/screenshots/captura_skills_antes.png)
+
+**Modo claro:**
+![Skill Progress Light](/public/assets/screenshots/captura_skills_despues01.png)
+
+**Modo oscuro:**
+![Skill Progress Dark](/public/assets/screenshots/captura_skills_despues02.png)
+
 
 ## Tecnologías Utilizadas
 
