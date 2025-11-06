@@ -202,10 +202,6 @@ Principales mejoras:
 **Filtrado**
 ![Lugares The Simpsons](/public/assets/screenshots/captura_simpsons_despues02.png)
 
-Perfecto, Ezequiel 👌
-Entonces hay que ajustar la redacción del punto 3 para que refleje que se trata de **una nueva incorporación al proyecto**, no una mejora sobre algo previo.
-Te dejo la versión revisada y coherente con el estilo de las otras secciones de tu README:
-
 
 ### **3. Nueva barra de habilidades (SkillProgressBar)**
 
@@ -236,6 +232,39 @@ Principales características:
 
 **Modo oscuro:**
 ![Skill Progress Dark](/public/assets/screenshots/captura_skills_despues02.png)
+
+
+### **4. Mejora visual en el componente Card**
+
+#### **Descripción:**
+
+Se mejoró el componente **Card** utilizado en las secciones de recursos visuales (como *Habilidades*, *Música Favorita* y *Películas Favoritas*), optimizando su diseño, comportamiento en *hover* y adaptación al modo oscuro.
+El cambio introduce una experiencia visual más fluida y moderna, sin alterar la estructura original del componente ni su integración con los datos.
+
+Los ajustes incluyeron la implementación de **colores dinámicos controlados desde el contexto de tema (`ThemeContext`)**, y la incorporación de variables CSS personalizadas para definir los estados de fondo, texto y sombra.
+Durante el *hover*, el bloque de texto ahora cambia tanto su color de fondo como el del texto, manteniendo legibilidad y contraste según el modo activo.
+
+Además, se ajustó el comportamiento del *box-shadow* para que la tarjeta proyecte una **sombra más intensa al pasar el cursor**, mejorando la sensación de profundidad e interactividad.
+
+Principales mejoras:
+
+* Eliminación del borde y ampliación de la imagen a todo el ancho de la tarjeta.
+* Adaptación dinámica de colores según modo claro u oscuro.
+* Nuevo efecto *hover* que cambia el color de fondo y texto del contenido.
+* Sombra más profunda e iluminada durante la interacción.
+
+
+#### **Antes:**
+
+![Card antes](/public/assets/screenshots/captura_card_antes.png)
+
+#### **Después:**
+
+**Modo claro**
+![Card después claro](/public/assets/screenshots/captura_card_despues01.png)
+
+**Modo oscuro**
+![Card después oscuro](/public/assets/screenshots/captura_card_despues02.png)
 
 
 ## Tecnologías Utilizadas

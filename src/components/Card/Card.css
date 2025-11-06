@@ -1,87 +1,114 @@
-/* || SECTIONS / CARDS */
+.card a,
+.card a:hover,
+.card a:focus,
+.card-link,
+.card-link:hover,
+.card-link:focus {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
 .card {
-    --padding: 0.8rem;
-    background-color: var(--color-background-section);
-    color: var(--color-primary-text);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    padding: var(--padding);
-    width: calc((100vw - var(--sidebar-width) - (var(--gap-card-section) * 4)) / 4);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  cursor: pointer;
+
+  /* Ancho fijo restaurado del diseño original */
+  width: calc((100vw - var(--sidebar-width, 260px) - (var(--gap-card-section, 16px) * 4)) / 4);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card a {
-    text-decoration: none;
-    /* quita subrayado */
-    color: inherit;
-    /* mantiene color del card */
+/* --- Enlace --- */
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
-.card a:hover {
-    text-decoration: none;
-    /* opcional: que no aparezca al hover */
-}
-
-
+/* --- Hover --- */
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+  transform: translateY(-6px);
+  box-shadow: 0 116px 30px rgba(0, 0, 0, 0.25);
 }
 
 .card-img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: var(--border-radius);
-    margin-bottom: 1rem;
+  width: 100%;
+  height: auto;
+  /* Si tenés inline style con objectFit, el inline style gana. */
+  /* Si querés usar contain desde CSS, cambialo aquí. */
+  object-fit: contain;
+  border-radius: 1rem 1rem 0 0;
+  transition: transform 0.4s ease;
 }
 
-.card p {
-    font-weight: 600;
+.card:hover .card-img {
+  transform: scale(1.05);
 }
 
+/* --- Bloque de contenido (ahora controla colores vía variables CSS) --- */
+.card-content {
+  background-color: var(--content-bg, #ffffff); 
+  color: var(--content-text, #333333);
+  transition: background-color 0.35s ease, color 0.35s ease;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%; 
+  min-height: 100px; 
+  box-sizing: border-box;
+}
 
+/* Cambio visual del bloque de contenido al hacer hover */
+.card:hover .card-content {
+  background-color: var(--content-hover-bg, #bab16aff);
+  color: var(--content-hover-text, #ffffff);
+}
+
+/* --- Tipografía --- */
 .card-title {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-top: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0.5rem 0 0.2rem;
 }
 
 .card-subtitle {
-    font-size: 0.8rem;
-    opacity: 0.8;
-    margin-top: -1rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin: 0;
 }
 
-/* || ANIMACIONES */
+/* --- Borde dinámico (mantengo tu efecto) --- */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  padding: 2px;
+  background: linear-gradient(135deg, #00bcd4, #8bc34a);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
 
-.parallax-card {
-    transition: transform 0.2s ease;
-    transform-style: preserve-3d;
+.card:hover::before {
+  opacity: 1;
+}
+
+/* --- Responsivo (restaurado del original) --- */
+@media (max-width: 900px) and (min-width: 401px) {
+  .card {
+    width: calc((100vw - (var(--gap-card-section, 16px) * 2)) / 2);
+  }
 }
 
 @media (max-width: 400px) {
-
-    .card {
-        display: flex;
-        width: 90%;
-    }
-
-    .card p {
-        font-weight: 300;
-    }
-
-}
-
-@media (max-width: 900px) and (min-width: 401px) {
-
-    .card {
-        display: flex;
-        width: calc((100vw - (var(--gap-card-section) * 2)) / 2);
-    }
-
-    .card p {
-        font-weight: 300;
-    }
+  .card {
+    width: 90%;
+  }
 }
