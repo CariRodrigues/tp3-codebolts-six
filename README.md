@@ -238,7 +238,7 @@ Principales características:
 
 #### **Descripción:**
 
-Se mejoró el componente **Card** utilizado en las secciones de recursos visuales (como *Habilidades*, *Música Favorita* y *Películas Favoritas*), optimizando su diseño, comportamiento en *hover* y adaptación al modo oscuro.
+Se mejoró el componente **Card** utilizado en las secciones de recursos visuales (como *Habilidades*, *Música Favorita* y *Películas Favoritas* y página de *Lugares de Argentina*), optimizando su diseño, comportamiento en *hover* y adaptación al modo oscuro.
 El cambio introduce una experiencia visual más fluida y moderna, sin alterar la estructura original del componente ni su integración con los datos.
 
 Los ajustes incluyeron la implementación de **colores dinámicos controlados desde el contexto de tema (`ThemeContext`)**, y la incorporación de variables CSS personalizadas para definir los estados de fondo, texto y sombra.
