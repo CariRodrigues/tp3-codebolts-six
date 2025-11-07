@@ -121,10 +121,16 @@ src/
 │   ├── FlippingCard/   # Tarjetas giratorias 3D
 │   ├── Footer/         # Pie de página
 │   ├── Header/         # Cabecera con imagen de fondo
+│   ├── Line/           # Línea de separación para seccines
 │   ├── MemberButton/   # Botones de integrantes
+│   ├── PageTransition/ # Efecto de fede-in al cargar la página
 │   ├── ScrollToTop/    # Scroll automático
+│   ├── ScrollToButton/ # Botón para subir al inicio de la página
+│   ├── SearchBar/      # Barra de busqueda
 │   ├── Section/        # Secciones estructuradas
 │   ├── Sidebar/        # Barra lateral navegacional
+│   ├── SimpsonsFavorites/ # Muestra tarjetas seleccionadas por ID
+│   ├── SkillProgressBar/  # Barra de progreso  
 │   ├── Title/          # Títulos estilizados
 │   └── ZoomableImage/  # Zoom dinamico
 ├── context/            # Context API
