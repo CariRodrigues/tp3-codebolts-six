@@ -4,7 +4,7 @@ import Logo from "@/assets/simpsons/the_simpsons_logo.svg";
 import backgroudSimpsons from "@/assets/simpsons/background_simpsons.jpg";
 
 
-const FlippingCard = ({ characterId }) => {
+const SimpsonsFavorites = ({ characterId }) => {
     const [character, setCharacter] = useState(null);
 
 
@@ -54,4 +54,4 @@ const FlippingCard = ({ characterId }) => {
     );
 };
 
-export default FlippingCard;
+export default SimpsonsFavorites;
