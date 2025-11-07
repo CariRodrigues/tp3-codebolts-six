@@ -112,41 +112,63 @@ evaluado.
 ## Arquitectura del Proyecto
 
 ```
-src/
-├── components/         # Componentes reutilizables
-│   ├── Card/           # Tarjetas de contenido
-│   ├── Carrusel/       # Carrusel de imágenes
-│   ├── DarkModeButton/ # Toggle de tema
-│   ├── DropDownMenu/   # Menú desplegable
-│   ├── FlippingCard/   # Tarjetas giratorias 3D
-│   ├── Footer/         # Pie de página
-│   ├── Header/         # Cabecera con imagen de fondo
-│   ├── Line/           # Línea de separación para seccines
-│   ├── MemberButton/   # Botones de integrantes
-│   ├── PageTransition/ # Efecto de fede-in al cargar la página
-│   ├── ScrollToTop/    # Scroll automático
-│   ├── ScrollToButton/ # Botón para subir al inicio de la página
-│   ├── SearchBar/      # Barra de busqueda
-│   ├── Section/        # Secciones estructuradas
-│   ├── Sidebar/        # Barra lateral navegacional
-│   ├── SimpsonsFavorites/ # Muestra tarjetas seleccionadas por ID
-│   ├── SkillProgressBar/  # Barra de progreso  
-│   ├── Title/          # Títulos estilizados
-│   └── ZoomableImage/  # Zoom dinamico
-├── context/            # Context API
-│   └── ThemeContext.jsx
-├── pages/              # Páginas de la aplicación
-│   ├── Bitacora/       # Documentación del proyecto
-│   ├── Carina/         # Perfil de Carina
-│   ├── DiagramaCarpetas/ # Estructura del proyecto
-│   ├── Eduardo/        # Perfil de Eduardo
-│   ├── Inicio/         # Página principal
-│   ├── LugaresArgentina/ # Destinos turísticos
-│   ├── RenderTree/     # Árbol de componentes
-│   └── Simpsons/       # Página temática Los Simpson
-├── assets/             # Recursos multimedia
-├── data/               # Datos JSON
-└── styles/             # Estilos globales
+TP3-CODEBOLTS-SIX
+│
+├── public/
+│     ├── assets/             
+│     │   ├── lugares/        # Imagenes de Lugares de Arg.
+│     │   └── screenshots/    # Capturas de pantalla
+│     │
+│     ├── data/               
+│     │   └── lugares.json    # Json con info de lugares de Arg.
+│     │
+│     ├── favicon.png         
+│     └── logo.png           
+│      
+├── src/
+│     ├── components/         # Componentes reutilizables
+│     │   ├── Card/           # Tarjetas de contenido
+│     │   ├── Carrusel/       # Carrusel de imágenes
+│     │   ├── DarkModeButton/ # Toggle de tema
+│     │   ├── DropDownMenu/   # Menú desplegable
+│     │   ├── FlippingCard/   # Tarjetas giratorias 3D
+│     │   ├── Footer/         # Pie de página
+│     │   ├── Header/         # Cabecera con imagen de fondo
+│     │   ├── Line/           # Línea de separación para seccines
+│     │   ├── MemberButton/   # Botones de integrantes
+│     │   ├── PageTransition/ # Efecto de fede-in al cargar la página
+│     │   ├── ScrollToTop/    # Scroll automático
+│     │   ├── ScrollToButton/ # Botón para subir al inicio de la página
+│     │   ├── SearchBar/      # Barra de busqueda
+│     │   ├── Section/        # Secciones estructuradas
+│     │   ├── Sidebar/        # Barra lateral navegacional
+│     │   ├── SimpsonsFavorites/ # Muestra tarjetas seleccionadas por ID
+│     │   ├── SkillProgressBar/  # Barra de progreso  
+│     │   ├── Title/          # Títulos estilizados
+│     │   └── ZoomableImage/  # Zoom dinamico
+│     ├── context/            # Context API
+│     │   └── ThemeContext.jsx
+│     ├── pages/              # Páginas de la aplicación
+│     │   ├── Bitacora/       # Documentación del proyecto
+│     │   ├── Carina/         # Perfil de Carina
+│     │   ├── DiagramaCarpetas/ # Estructura del proyecto
+│     │   ├── Eduardo/        # Perfil de Eduardo
+│     │   ├── Inicio/         # Página principal
+│     │   ├── LugaresArgentina/ # Destinos turísticos
+│     │   ├── RenderTree/     # Árbol de componentes
+│     │   └── Simpsons/       # Página temática Los Simpson
+│     ├── assets/             # Recursos multimedia
+│     └── styles/             # Estilos globales
+│
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── README.md
+├── vercel.json
+└── vite.config.js
+
 ```
 
 ## Páginas Implementadas
