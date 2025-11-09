@@ -135,7 +135,10 @@ export default function Carina() {
         verbos={verbos}
       />
       <ScrollToTopBtn/>
-      <SocialNetworkButton />
+      <SocialNetworkButton
+      github="https://github.com/CariRodrigues"
+      linkedin="https://www.linkedin.com/in/carina-rodrigues-cabrita-61589a18a/"
+      instagram="https://www.instagram.com/cari_rodriguess" />
       <Footer />
     </div>
   );
