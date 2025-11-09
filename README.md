@@ -202,10 +202,10 @@ Principales mejoras:
 
 
 #### **Antes:**
-![Carga de página antes](/public/assets/screenshots/rayo_antes.gif)
+![Carga de página antes](/public/assets/screenshots/rayo_antes.png)
 
 #### **Despues:**
-![Rayo al cargar página](/public/assets/screenshots/rayo_despues.gif)
+![Rayo al cargar página](/public/assets/screenshots/rayo_despues.png)
 
 ### **2. Barra de busqueda**
 #### **Descripción:** 
@@ -269,9 +269,7 @@ Principales características:
 ![Antes Sin Skills](/public/assets/screenshots/captura_skills_antes.png)
 
 **Modo claro:**
-![Skill Progress Light](/public/assets/screenshots/captura_skills_despues01.gif)
-
-<img src="/public/assets/screenshots/captura_skills_despues01.gif" alt="Skill Progress Light" width="600" />
+![Skill Progress Light](/public/assets/screenshots/captura_skills_despues01.png)
 
 
 **Modo oscuro:**
@@ -300,15 +298,15 @@ Principales mejoras:
 
 #### **Antes:**
 
-![Card antes](/public/assets/screenshots/captura_card_antes.gif)
+![Card antes](/public/assets/screenshots/captura_card_antes.png)
 
 #### **Después:**
 
 **Modo claro**
-![Card después claro](/public/assets/screenshots/captura_card_despues01.gif)
+![Card después claro](/public/assets/screenshots/captura_card_despues01.png)
 
 **Modo oscuro**
-![Card después oscuro](/public/assets/screenshots/captura_card_despues02.gif)
+![Card después oscuro](/public/assets/screenshots/captura_card_despues02.png)
 
 ### **5. Incorporación de enlaces a redes sociales con íconos interactivos**
 
