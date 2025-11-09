@@ -6,7 +6,6 @@ import '@/components/Header/Header.css';
 const Header = ({ height, name, lastName, city, age, ageText, backgroundImage, backgroundImageDark, textColor, shadowColor }) => {
 
   const { isDarkMode } = useTheme();
-  console.log("Header - isDarkMode:", isDarkMode);
 
   const headerStyle = {
     backgroundImage: `url(${isDarkMode ? backgroundImageDark : backgroundImage})`,

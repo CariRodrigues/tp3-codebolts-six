@@ -1,15 +1,9 @@
 import React from "react";
-import "@/components/SocialNetworkButton/SocialNetworkButton.css";
+import "@/components/SocialNetworkButton/SocialNetworkButton.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin, faInstagram} from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
-export default function SocialNetworkButton({ networks }) {
-  const icons = {
-    github: faGithub,
-    linkedin: faLinkedin,
-    instagram: faInstagram,
-  };
-
+export default function SocialNetworkButton() {
   return (
     <div className="SocialButtons">
       <div className="Space">

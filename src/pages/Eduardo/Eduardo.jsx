@@ -1,3 +1,4 @@
+import { useTheme } from '@/context/ThemeContext';
 import Header from '@/components/Header/Header';
 import Section from '@/components/Section/Section';
 import Footer from '@/components/Footer/Footer';
@@ -6,6 +7,7 @@ import SimpsonsFavorites from '@/components/SimpsonsFavorites/SimpsonsFavorites.
 import Carrusel from '@/components/Carrusel/Carrusel.jsx';
 import SkillProgressBar from '@/components/SkillProgressBar/SkillProgressBar.jsx';
 import ScrollToTopBtn from '@/components/ScrollToTopButton/ScrollToTopButton';
+import SocialNetworkButton from "@/components/SocialNetworkButton/SocialNetworkButton.jsx";
 
 // || Imagenes importadas ||
 import eduardoHeader from '@/assets/eduardo/eduardo_header.webp';
@@ -28,6 +30,8 @@ import darkSide from '@/assets/eduardo/dark_side.webp';
 import blackAlbum from '@/assets/eduardo/black_album.webp';
 
 const Eduardo = () => {
+  const { isDarkMode } = useTheme();
+  
   const habilidades = [
     { resource: construyendo, alt: "Diseñar y construir cosas", text: "Diseñar y construir cosas" },
     { resource: aprendizaje, alt: "Aprendizaje continuo", text: "Aprendizaje continuo" },
@@ -103,6 +107,12 @@ const Eduardo = () => {
     { skill: "MongoDB", level: 65, color: "linear-gradient(90deg, #4DB33D, #2E7D32)" },
   ];
 
+  const redesEdu = {
+  github: "https://github.com/eduardo-mendiola",
+  linkedin: "https://www.linkedin.com",
+  instagram: "https://www.instagram.com",
+};
+
 
   return (
     <>
@@ -129,6 +139,7 @@ const Eduardo = () => {
         verbos={verbos}
       />
       <ScrollToTopBtn />
+      <SocialNetworkButton networks={redesEdu}/>
       <Footer />
     </>
   );

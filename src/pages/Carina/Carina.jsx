@@ -1,4 +1,5 @@
 import React from "react";
+import { useTheme } from "@/context/ThemeContext";
 import Header from "@/components/Header/Header.jsx";
 import Section from "@/components/Section/Section.jsx";
 import Footer from "@/components/Footer/Footer.jsx";
@@ -32,11 +33,13 @@ import Ntvg from "@/assets/carina/music2.jpg";
 import GustavoCerati from "@/assets/carina/music3.jpg";
 
 export default function Carina() {
+  const { isDarkMode } = useTheme();
+  
   const habilidades = [
-    { resource: SkillOne, alt: "Cocinar", text: "Cocinar" },
-    { resource: SkillTwo, alt: "Enseñar", text: "Enseñar" },
-    { resource: SkillThree, alt: "Sacar Fotos", text: "Sacar Fotos" },
-    { resource: SkillFour, alt: "Leer", text: "Leer Libros" },
+    { resource: SkillOne, alt: "Cocinar", text: "Cocinar", imgHeight: "380px" },
+    { resource: SkillTwo, alt: "Enseñar", text: "Enseñar", imgHeight: "380px" },
+    { resource: SkillThree, alt: "Sacar Fotos", text: "Sacar Fotos", imgHeight: "380px" },
+    { resource: SkillFour, alt: "Leer", text: "Leer Libros", imgHeight: "380px" },
   ];
 
   const peliculas = [
@@ -45,18 +48,21 @@ export default function Carina() {
       alt: "Efecto mariposa",
       text: "The Butterfly Effect",
       href: "https://en.wikipedia.org/wiki/The_Butterfly_Effect",
+      imgHeight: "370px"
     },
     {
       resource: HarryPotter4,
       alt: "Harry Potter y el Caliz de Fuego",
       text: "Harry Potter y el Caliz de Fuego",
       href: "https://en.wikipedia.org/wiki/Harry_Potter_and_the_Goblet_of_Fire_(film)",
+      imgHeight: "370px"
     },
     {
       resource: HideAndSeek,
       alt: "Hide and Seek",
       text: "Hide and Seek",
       href: "https://en.wikipedia.org/wiki/Hide_and_Seek_(2005_film)",
+      imgHeight: "370px"
     },
   ];
 
@@ -66,18 +72,21 @@ export default function Carina() {
       alt: "ColdPlay",
       text: "ColdPlay",
       href: "https://www.youtube.com/watch?v=yKNxeF4KMsY&list=RDyKNxeF4KMsY&start_radio=1",
+      imgHeight: "380px"
     },
     {
       resource: Ntvg,
       alt: "No te va Gustar",
       text: "No te va Gustar",
       href: "https://www.youtube.com/watch?v=GBsRPUxMkkw&list=RDGBsRPUxMkkw&start_radio=1",
+      imgHeight: "380px"
     },
     {
       resource: GustavoCerati,
       alt: "Gustavo Cerati",
       text: "Gustavo Cerati",
       href: "https://www.youtube.com/watch?v=eAO7CEcCD3s&list=RDeAO7CEcCD3s&start_radio=1",
+      imgHeight: "380px"
     },
   ];
 
@@ -97,7 +106,7 @@ export default function Carina() {
     futuro: "Me gustaría conocer",
   };
 
-   const skills = [
+  const skills = [
     { skill: "Java", level: 85, color: "linear-gradient(90deg, #22f71e, #19c716)" },
     { skill: "Python", level: 75, color: "linear-gradient(90deg, #3776ab, #28527a)" },
     { skill: "JavaScript", level: 80, color: "linear-gradient(90deg, #f7df1e, #e5c700)" },
@@ -107,6 +116,12 @@ export default function Carina() {
     { skill: "SQL / MySQL", level: 70, color: "linear-gradient(90deg, #00618a, #00758f)" },
     { skill: "MongoDB", level: 65, color: "linear-gradient(90deg, #4DB33D, #2E7D32)" },
   ];
+
+  const redesCari = {
+    github: "https://github.com/CariRodrigues",
+    linkedin: "https://www.linkedin.com/in/cari-rodrigues",
+    instagram: "https://www.instagram.com/cari_rodriguess",
+  };
 
   return (
     <div className="animate__animated animate__fadeIn">
@@ -134,11 +149,8 @@ export default function Carina() {
         meGustaria={meGustaria}
         verbos={verbos}
       />
-      <ScrollToTopBtn/>
-      <SocialNetworkButton
-      github="https://github.com/CariRodrigues"
-      linkedin="https://www.linkedin.com/in/carina-rodrigues-cabrita-61589a18a/"
-      instagram="https://www.instagram.com/cari_rodriguess" />
+      <ScrollToTopBtn />
+      <SocialNetworkButton networks={redesCari} />
       <Footer />
     </div>
   );
