@@ -1,0 +1,33 @@
+.SocialButtons{
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--color-light-gray);
+}
+.Space{
+    background-color: white;
+    height: 0.1em;
+}
+.ButtonStyle{
+    background-Color:white;
+    border: none;
+    margin: 10px;
+    border-Radius: 50%;
+    font-Size: 1.5rem;
+    width: 60px;
+    height: 60px;
+    z-Index: 100;
+    cursor:pointer;
+    box-Shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+@media (max-width:900px){
+  .SocialButtons{
+    padding: 0.5rem;
+}
+.ButtonStyle{
+    width: 35px;
+    height: 35px;
+    font-Size: 1rem;
+}
+}

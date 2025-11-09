@@ -7,6 +7,7 @@ import FlippingCard from '@/components/FlippingCard/FlippingCard';
 import Carrusel from "@/components/Carrusel/Carrusel.jsx";
 import ScrollToTopBtn from "@/components/ScrollToTopButton/ScrollToTopButton";
 import 'animate.css';
+import SocialNetworkButton from "@/components/SocialNetworkButton/SocialNetworkButton.jsx";
 
 
 // 🖼️ Importamos las imágenes de Carina
@@ -121,6 +122,7 @@ export default function Carina() {
         verbos={verbos}
       />
       <ScrollToTopBtn/>
+      <SocialNetworkButton />
       <Footer />
     </div>
   );
