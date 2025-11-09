@@ -546,7 +546,22 @@ export default function Bitacora() {
           </ul>
         </p>
 
-        
+        <h3 style={subHeadingStyle}>Mejora 6: Incorporación de Enlaces a Redes Sociales con Íconos</h3>
+        <p style={paragraphStyle}>
+          Se añadió una nueva sección con <strong>enlaces a redes sociales</strong> para mejorar la conexión del proyecto con el entorno digital
+          y ofrecer acceso directo a los perfiles oficiales del equipo o del desarrollador.
+        </p>
+        <p style={paragraphStyle}>Mejoras implementadas:
+          <ul>
+            <li><strong>Nueva Sección Dedicada:</strong> Inclusión de accesos directos visibles a las principales redes sociales.</li>
+            <li><strong>Íconos Representativos:</strong> Cada red incluye su propio ícono distintivo (GitHub, LinkedIn, Instagram, X/Twitter, etc.).</li>
+            <li><strong>Integración con el Tema:</strong> Adaptación automática al modo claro u oscuro mediante ThemeContext.</li>
+            <li><strong>Diseño Responsivo:</strong> Disposición flexible que se ajusta correctamente en distintos tamaños de pantalla.</li>
+            <li><strong>Componente Reutilizable:</strong> Estructura modular que permite incorporar nuevos enlaces fácilmente.</li>
+            <li><strong>Cohesión Visual:</strong> Aporte estético que complementa la identidad general del proyecto.</li>
+          </ul>
+        </p>
+
         <section>
           <h2 style={sectionHeadingStyle}>Documentación y Deployment TP3</h2>
           <h3 style={subHeadingStyle}>Documentación en README</h3>
