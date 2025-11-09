@@ -1,3 +1,4 @@
+import { useTheme } from '@/context/ThemeContext';
 import Header from '@/components/Header/Header';
 import Section from '@/components/Section/Section';
 import Footer from '@/components/Footer/Footer';
@@ -29,6 +30,8 @@ import darkSide from '@/assets/eduardo/dark_side.webp';
 import blackAlbum from '@/assets/eduardo/black_album.webp';
 
 const Eduardo = () => {
+  const { isDarkMode } = useTheme();
+  
   const habilidades = [
     { resource: construyendo, alt: "Diseñar y construir cosas", text: "Diseñar y construir cosas" },
     { resource: aprendizaje, alt: "Aprendizaje continuo", text: "Aprendizaje continuo" },

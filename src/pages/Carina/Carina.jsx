@@ -1,4 +1,5 @@
 import React from "react";
+import { useTheme } from "@/context/ThemeContext";
 import Header from "@/components/Header/Header.jsx";
 import Section from "@/components/Section/Section.jsx";
 import Footer from "@/components/Footer/Footer.jsx";
@@ -32,6 +33,8 @@ import Ntvg from "@/assets/carina/music2.jpg";
 import GustavoCerati from "@/assets/carina/music3.jpg";
 
 export default function Carina() {
+  const { isDarkMode } = useTheme();
+  
   const habilidades = [
     { resource: SkillOne, alt: "Cocinar", text: "Cocinar", imgHeight: "380px" },
     { resource: SkillTwo, alt: "Enseñar", text: "Enseñar", imgHeight: "380px" },

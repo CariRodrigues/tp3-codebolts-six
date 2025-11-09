@@ -5,19 +5,16 @@ const ThemeContext = createContext();
 
 // Provider component
 export const ThemeProvider = ({ children }) => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  // Load saved mode from localStorage
-  useEffect(() => {
-    const saved = localStorage.getItem("darkMode") === "true";
-    setIsDarkMode(saved);
-    document.body.classList.toggle("dark-mode", saved);
-  }, []);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    // Inicializar desde localStorage directamente
+    const saved = localStorage.getItem("darkMode");
+    return saved === "true";
+  });
 
   // Update body + localStorage whenever it changes
   useEffect(() => {
     document.body.classList.toggle("dark-mode", isDarkMode);
-    localStorage.setItem("darkMode", isDarkMode);
+    localStorage.setItem("darkMode", String(isDarkMode));
   }, [isDarkMode]);
 
   const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
