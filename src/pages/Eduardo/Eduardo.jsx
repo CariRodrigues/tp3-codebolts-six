@@ -6,6 +6,7 @@ import SimpsonsFavorites from '@/components/SimpsonsFavorites/SimpsonsFavorites.
 import Carrusel from '@/components/Carrusel/Carrusel.jsx';
 import SkillProgressBar from '@/components/SkillProgressBar/SkillProgressBar.jsx';
 import ScrollToTopBtn from '@/components/ScrollToTopButton/ScrollToTopButton';
+import SocialNetworkButton from "@/components/SocialNetworkButton/SocialNetworkButton.jsx";
 
 // || Imagenes importadas ||
 import eduardoHeader from '@/assets/eduardo/eduardo_header.webp';
@@ -103,6 +104,12 @@ const Eduardo = () => {
     { skill: "MongoDB", level: 65, color: "linear-gradient(90deg, #4DB33D, #2E7D32)" },
   ];
 
+  const redesEdu = {
+  github: "https://github.com/eduardo-mendiola",
+  linkedin: "https://www.linkedin.com",
+  instagram: "https://www.instagram.com",
+};
+
 
   return (
     <>
@@ -129,6 +136,7 @@ const Eduardo = () => {
         verbos={verbos}
       />
       <ScrollToTopBtn />
+      <SocialNetworkButton networks={redesEdu}/>
       <Footer />
     </>
   );
