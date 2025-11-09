@@ -189,10 +189,23 @@ TP3-CODEBOLTS-SIX
 
 ### **1. Efecto de Rayo en carga de páginas**
 #### **Descripción:** 
+Se implementó un componente animado **PageTransition**, que muestra un efecto de rayo con transición fade-in al cargar la página, utilizando una imagen representativa del logo del equipo.
+
+El rayo aparece desde la parte superior de la pantalla y desciende progresivamente hasta el final, aumentando su tamaño e intensidad luminosa durante el recorrido para generar una sensación de energía y dinamismo. Al completar el descenso, se desvanece suavemente (fade-out).
+
+Su implementación mejora la identidad visual y experiencia de carga de la aplicación, aportando un toque distintivo al branding del equipo.
+
+Principales mejoras:
+
+* Transición de entrada más atractiva y profesional.
+* Refuerzo visual de la identidad del equipo mediante el logo animado.
+
 
 #### **Antes:**
+![Carga de página antes](/public/assets/screenshots/rayo_antes.gif)
 
 #### **Despues:**
+![Rayo al cargar página](/public/assets/screenshots/rayo_despues.gif)
 
 ### **2. Barra de busqueda**
 #### **Descripción:** 
@@ -256,7 +269,10 @@ Principales características:
 ![Antes Sin Skills](/public/assets/screenshots/captura_skills_antes.png)
 
 **Modo claro:**
-![Skill Progress Light](/public/assets/screenshots/captura_skills_despues01.png)
+![Skill Progress Light](/public/assets/screenshots/captura_skills_despues01.gif)
+
+<img src="/public/assets/screenshots/captura_skills_despues01.gif" alt="Skill Progress Light" width="600" />
+
 
 **Modo oscuro:**
 ![Skill Progress Dark](/public/assets/screenshots/captura_skills_despues02.png)
@@ -284,15 +300,46 @@ Principales mejoras:
 
 #### **Antes:**
 
-![Card antes](/public/assets/screenshots/captura_card_antes.png)
+![Card antes](/public/assets/screenshots/captura_card_antes.gif)
 
 #### **Después:**
 
 **Modo claro**
-![Card después claro](/public/assets/screenshots/captura_card_despues01.png)
+![Card después claro](/public/assets/screenshots/captura_card_despues01.gif)
 
 **Modo oscuro**
-![Card después oscuro](/public/assets/screenshots/captura_card_despues02.png)
+![Card después oscuro](/public/assets/screenshots/captura_card_despues02.gif)
+
+### **5. Incorporación de enlaces a redes sociales con íconos interactivos**
+
+#### **Descripción:**
+
+Se añadió una nueva sección de enlaces a redes sociales en el sitio, con íconos interactivos que permiten acceder directamente a las plataformas oficiales del equipo o del desarrollador.
+
+Cada enlace incluye un ícono representativo de la red correspondiente (como GitHub, LinkedIn, Instagram o X/Twitter), diseñado para mantener coherencia visual con el tema activo (modo claro u oscuro).
+Los íconos se implementaron como componentes reutilizables, con soporte para animaciones en hover que aumentan ligeramente su tamaño y aplican un efecto de brillo y cambio de color, reforzando la sensación de interactividad.
+
+Además, se aplicó una disposición adaptable (responsive) para asegurar su correcta visualización en distintos tamaños de pantalla, garantizando accesibilidad y consistencia en toda la interfaz.
+
+Principales mejoras:
+
+* Acceso directo a las principales redes sociales desde el sitio.
+* Integración visual coherente con el tema claro/oscuro.
+* Efectos en hover con animación suave y transición fluida.
+* Diseño adaptable y reutilizable en otras secciones o proyectos.
+
+
+#### **Antes:**
+
+![Card antes](/public/assets/screenshots/captura_redes_antes.png)
+
+#### **Después:**
+
+**Modo claro**
+![Card después claro](/public/assets/screenshots/captura_redes_despues01.png)
+
+**Modo oscuro**
+![Card después oscuro](/public/assets/screenshots/captura_redes_despues02.png)
 
 
 ## Tecnologías Utilizadas
