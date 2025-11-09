@@ -2,8 +2,9 @@ import Header from '@/components/Header/Header';
 import Section from '@/components/Section/Section';
 import Footer from '@/components/Footer/Footer';
 import Card from '@/components/Card/Card.jsx';
-import FlippingCard from '@/components/FlippingCard/FlippingCard';
+import SimpsonsFavorites from '@/components/SimpsonsFavorites/SimpsonsFavorites.jsx';
 import Carrusel from '@/components/Carrusel/Carrusel.jsx';
+import SkillProgressBar from '@/components/SkillProgressBar/SkillProgressBar.jsx';
 import ScrollToTopBtn from '@/components/ScrollToTopButton/ScrollToTopButton';
 
 // || Imagenes importadas ||
@@ -91,6 +92,17 @@ const Eduardo = () => {
     futuro: "Me gustaría conocer",
   };
 
+  const skills = [
+    { skill: "Java", level: 85, color: "linear-gradient(90deg, #22f71e, #19c716)" },
+    { skill: "Python", level: 75, color: "linear-gradient(90deg, #3776ab, #28527a)" },
+    { skill: "JavaScript", level: 80, color: "linear-gradient(90deg, #f7df1e, #e5c700)" },
+    { skill: "React", level: 65, color: "linear-gradient(90deg, #61dafb, #21a1f1)" },
+    { skill: "HTML/CSS", level: 80, color: "linear-gradient(90deg, #e44d26, #f16529)" },
+    { skill: "Git / GitHub", level: 75, color: "linear-gradient(90deg, #f05033, #24292e)" },
+    { skill: "SQL / MySQL", level: 70, color: "linear-gradient(90deg, #00618a, #00758f)" },
+    { skill: "MongoDB", level: 65, color: "linear-gradient(90deg, #4DB33D, #2E7D32)" },
+  ];
+
 
   return (
     <>
@@ -104,9 +116,10 @@ const Eduardo = () => {
         backgroundImageDark={eduardoHeaderDark}
       />
       <Section title="Habilidades" cards={habilidades} CardComponent={Card} />
+      <SkillProgressBar title="Tech Stack" skills={skills} />
       <Section title="Películas Favoritas" cards={peliculas} CardComponent={Card} />
       <Section title="Música Favorita" cards={musica} CardComponent={Card} />
-      <Section title="Personajes Favoritos de Los Simpsons" cards={simpsonsCards} CardComponent={FlippingCard} />
+      <Section title="Personajes Favoritos de Los Simpsons" cards={simpsonsCards} CardComponent={SimpsonsFavorites} />
       <Carrusel
         folder="lugares"
         dataPath="/data/lugares.json"
@@ -115,7 +128,7 @@ const Eduardo = () => {
         meGustaria={meGustaria}
         verbos={verbos}
       />
-      <ScrollToTopBtn/>
+      <ScrollToTopBtn />
       <Footer />
     </>
   );

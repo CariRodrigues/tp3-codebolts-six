@@ -5,7 +5,7 @@ const ZoomableImage = ({ src, alt }) => {
   const { isDarkMode } = useTheme();
 
   return (
-    <div style={{ width: "100%", height: "100%", overflow: "hidden", border: "1px solid #444", borderRadius: "15px", position: "relative", background: isDarkMode ? "#000" : "#fff", }}>
+    <div style={{ width: "100%", height: "100%", overflow: "hidden", border: "1px solid #444", borderRadius: "15px", position: "relative", background: isDarkMode ? "#252525" : "#fff", }}>
       <TransformWrapper
         initialScale={1}   
         minScale={0.5}       

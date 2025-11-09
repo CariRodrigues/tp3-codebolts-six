@@ -102,6 +102,22 @@ export default function Bitacora() {
           <li>19/10/25: Creación del componente Simpsons con FlippingCards interactivas.</li>
           <li>19/10/25: Implementación del componente LugaresArgentina con integración de datos JSON.</li>
           <li>19/10/25: Instalación de react-zoom-pan-pinch e implementación de ZoomableImage en RenderTree.</li>
+          <li>20/10/25: Lanzamiento del TP3 - Inicio de planificación de mejoras.</li>
+          <li>23/10/25: Inicio de trabajo en mejoras para el TP3.</li>
+          <li>25/10/25: Desarrollo del componente SearchBar reutilizable.</li>
+          <li>26/10/25: Integración de SearchBar en LugaresArgentina con filtrado dinámico.</li>
+          <li>27/10/25: Implementación de SearchBar en Simpsons con búsqueda en API.</li>
+          <li>28/10/25: Creación del repositorio actualizado en GitHub para TP3.</li>
+          <li>30/10/25: Desarrollo del componente SkillProgressBar con animaciones.</li>
+          <li>31/10/25: Implementación de Intersection Observer API para animación de barras.</li>
+          <li>01/11/25: Integración de SkillProgressBar en páginas de integrantes.</li>
+          <li>02/11/25: Mejora visual del componente Card con efectos hover dinámicos.</li>
+          <li>03/11/25: Adaptación de Card al sistema de modo claro/oscuro mejorado.</li>
+          <li>04/11/25: Implementación de efectos de transición para navegación entre páginas.</li>
+          <li>05/11/25: Optimización de animaciones y efectos de carga.</li>
+          <li>06/11/25: Actualización de documentación y README con capturas de pantalla.</li>
+          <li>07/11/25: Despliegue actualizado en Vercel con todas las mejoras del TP3.</li>
+          <li>09/11/25: Fecha de entrega del TP3.</li>
         </ol>
 
         <section>
@@ -295,7 +311,7 @@ export default function Bitacora() {
 
         </section>
 
-        
+
         <section>
           <h2 style={sectionHeadingStyle}>Gestión de Estado y Contexto</h2>
           <h3 style={subHeadingStyle}>ThemeContext</h3>
@@ -440,6 +456,151 @@ export default function Bitacora() {
         </section>
 
         <section>
+          <h2 style={sectionHeadingStyle}>Tercera Etapa - TP3: Mejoras y Optimizaciones</h2>
+          <h3 style={subHeadingStyle}>Objetivo del TP3</h3>
+          <p style={paragraphStyle}>
+            El TP3 se enfocó en aplicar mejoras significativas a la SPA desarrollada en el TP2.
+            El objetivo principal fue implementar al menos 5 mejoras que potencien la funcionalidad,
+            usabilidad y experiencia visual del proyecto. Cada mejora debía estar documentada en el README
+            con capturas de pantalla del "antes" y "después".
+          </p>
+
+          <h3 style={subHeadingStyle}>Mejora 1: Animaciones y Efectos de carga</h3>
+          <p style={paragraphStyle}>
+            Se implemento efectos de rayo, parte del logo del equipo, en la carga de las páginas.
+          </p>
+          <p style={paragraphStyle}>
+            Implementaciones realizadas:
+            <ul>
+              <li>
+                <strong>Animación de rayo:</strong> Una imagen, que forma parte del logo del equipo, aparece durante unas milésimas de segundo al cargar cada página.
+              </li>
+            </ul>
+          </p>
+        </section>
+
+        <h3 style={subHeadingStyle}>Mejora 2: Efectos de Transición entre Páginas</h3>
+        <p style={paragraphStyle}>
+          Se implementaron animaciones de transición suaves para mejorar la experiencia de navegación entre páginas.
+        </p>
+        <p style={paragraphStyle}>Características implementadas:
+          <ul>
+            <li><strong>Transiciones Fluidas:</strong> Animaciones de entrada y salida al cambiar de página</li>
+            <li><strong>Efectos de Fade:</strong> Desvanecimiento suave del contenido durante la navegación</li>
+            <li><strong>Performance Optimizado:</strong> Animaciones CSS3 para mejor rendimiento</li>
+            <li><strong>UX Mejorada:</strong> Feedback visual claro durante la navegación</li>
+          </ul>
+        </p>
+
+        <h3 style={subHeadingStyle}>Mejora 3: Componente SearchBar Reutilizable</h3>
+        <p style={paragraphStyle}>
+          Se desarrolló un componente <strong>SearchBar</strong> completamente reutilizable que se integró
+          en dos páginas diferentes del proyecto: <strong>Lugares de Argentina</strong> y <strong>The Simpsons</strong>.
+        </p>
+        <p style={paragraphStyle}>Características principales:
+          <ul>
+            <li><strong>Reutilización:</strong> Un solo componente utilizado en múltiples contextos con diferentes fuentes de datos</li>
+            <li><strong>Props Configurables:</strong> Acepta placeholder, value y onChange para máxima flexibilidad</li>
+            <li><strong>Integración con ThemeContext:</strong> Adaptación automática al modo claro/oscuro</li>
+            <li><strong>Filtrado en Tiempo Real:</strong> Búsqueda instantánea mientras el usuario escribe</li>
+            <li><strong>Filtrado por JSON Local:</strong> En Lugares de Argentina filtra datos cargados desde lugares.json</li>
+            <li><strong>Búsqueda en API Externa:</strong> En Simpsons realiza búsquedas sobre todos los personajes de la API</li>
+            <li><strong>Reset de Paginación:</strong> Reinicia automáticamente la paginación al detectar cambios en la búsqueda</li>
+            <li><strong>Estilos Dinámicos:</strong> Colores de fondo, texto y borde se adaptan según el tema activo</li>
+          </ul>
+        </p>
+
+        <h3 style={subHeadingStyle}>Mejora 4: Componente SkillProgressBar</h3>
+        <p style={paragraphStyle}>
+          Se implementó un nuevo componente <strong>SkillProgressBar</strong> para visualizar de forma
+          animada las habilidades técnicas en las páginas de cada integrante del equipo.
+        </p>
+        <p style={paragraphStyle}>Características principales:
+          <ul>
+            <li><strong>Nueva Funcionalidad Visual:</strong> Representación gráfica de nivel de dominio en tecnologías</li>
+            <li><strong>Animación con Intersection Observer:</strong> Las barras se animan solo cuando son visibles en pantalla</li>
+            <li><strong>Integración con Section:</strong> Reutiliza componentes Title y Line para mantener consistencia</li>
+            <li><strong>Colores Personalizados:</strong> Cada tecnología tiene su propio degradado de color (Java, JavaScript, React, Python, HTML/CSS, etc.)</li>
+            <li><strong>Integración con Modo Oscuro:</strong> Adaptación completa al sistema de temas</li>
+            <li><strong>Diseño Minimalista:</strong> Sin sombras ni recuadros, enfoque limpio y moderno</li>
+            <li><strong>Responsive:</strong> Adaptación fluida a diferentes tamaños de pantalla</li>
+            <li><strong>Performance Optimizado:</strong> Animación controlada para no afectar el rendimiento</li>
+          </ul>
+        </p>
+
+        <h3 style={subHeadingStyle}>Mejora 5: Mejora Visual del Componente Card</h3>
+        <p style={paragraphStyle}>
+          Se renovó completamente el diseño del componente <strong>Card</strong> utilizado en múltiples
+          secciones del proyecto (Habilidades, Música Favorita, Películas Favoritas, Lugares de Argentina).
+        </p>
+        <p style={paragraphStyle}>Mejoras implementadas:
+          <ul>
+            <li><strong>Eliminación de Bordes:</strong> La imagen ahora ocupa todo el ancho de la tarjeta</li>
+            <li><strong>Colores Dinámicos:</strong> Control completo desde ThemeContext para modo claro/oscuro</li>
+            <li><strong>Nuevo Efecto Hover:</strong> Cambio dinámico de color de fondo y texto en la sección de contenido</li>
+            <li><strong>Sombra Mejorada:</strong> Box-shadow más profunda e intensa durante la interacción</li>
+            <li><strong>Variables CSS Personalizadas:</strong> Definición clara de estados de fondo, texto y sombra</li>
+            <li><strong>Mayor Contraste:</strong> Mejora en legibilidad tanto en modo claro como oscuro</li>
+            <li><strong>Sensación de Profundidad:</strong> Efecto de elevación más pronunciado al interactuar</li>
+            <li><strong>Transiciones Suaves:</strong> Animaciones fluidas en todos los cambios de estado</li>
+          </ul>
+        </p>
+
+        <h3 style={subHeadingStyle}>Mejora 6: Incorporación de Enlaces a Redes Sociales con Íconos</h3>
+        <p style={paragraphStyle}>
+          Se añadió una nueva sección con <strong>enlaces a redes sociales</strong> para mejorar la conexión del proyecto con el entorno digital
+          y ofrecer acceso directo a los perfiles oficiales del equipo o del desarrollador.
+        </p>
+        <p style={paragraphStyle}>Mejoras implementadas:
+          <ul>
+            <li><strong>Nueva Sección Dedicada:</strong> Inclusión de accesos directos visibles a las principales redes sociales.</li>
+            <li><strong>Íconos Representativos:</strong> Cada red incluye su propio ícono distintivo (GitHub, LinkedIn, Instagram, X/Twitter, etc.).</li>
+            <li><strong>Integración con el Tema:</strong> Adaptación automática al modo claro u oscuro mediante ThemeContext.</li>
+            <li><strong>Diseño Responsivo:</strong> Disposición flexible que se ajusta correctamente en distintos tamaños de pantalla.</li>
+            <li><strong>Componente Reutilizable:</strong> Estructura modular que permite incorporar nuevos enlaces fácilmente.</li>
+            <li><strong>Cohesión Visual:</strong> Aporte estético que complementa la identidad general del proyecto.</li>
+          </ul>
+        </p>
+
+        <section>
+          <h2 style={sectionHeadingStyle}>Documentación y Deployment TP3</h2>
+          <h3 style={subHeadingStyle}>Documentación en README</h3>
+          <p style={paragraphStyle}>
+            Se actualizó completamente el README.md con documentación exhaustiva de todas las mejoras:
+            <ul>
+              <li><strong>Capturas de Pantalla:</strong> Imágenes de "antes" y "después" para cada mejora implementada</li>
+              <li><strong>Descripción Detallada:</strong> Explicación completa de cada funcionalidad nueva</li>
+              <li><strong>Modo Claro y Oscuro:</strong> Capturas mostrando ambos modos para demostrar adaptabilidad</li>
+              <li><strong>Funcionalidades:</strong> Demostración visual del filtrado y animaciones en acción</li>
+              <li><strong>Estructura Organizada:</strong> Secciones claramente definidas para cada mejora</li>
+            </ul>
+          </p>
+
+          <h3 style={subHeadingStyle}>Control de Versiones</h3>
+          <p style={paragraphStyle}>
+            Gestión ordenada del código fuente:
+            <ul>
+              <li><strong>Commits Descriptivos:</strong> Mensajes claros que describen cada cambio implementado</li>
+              <li><strong>Repositorio Actualizado:</strong> GitHub con historial completo de desarrollo</li>
+              <li><strong>Branching Strategy:</strong> Uso de ramas para desarrollo de features individuales</li>
+              <li><strong>Merge Requests:</strong> Integración ordenada de cambios a la rama principal</li>
+            </ul>
+          </p>
+
+          <h3 style={subHeadingStyle}>Deployment en Vercel</h3>
+          <p style={paragraphStyle}>
+            Publicación actualizada del proyecto:
+            <ul>
+              <li><strong>Deployment Automático:</strong> Integración continua con GitHub</li>
+              <li><strong>URL Pública:</strong> Proyecto accesible en https://tp2-codebolts-six.vercel.app</li>
+              <li><strong>Performance Optimizado:</strong> Build optimizado con Vite para carga rápida</li>
+              <li><strong>SSL/HTTPS:</strong> Certificados de seguridad automáticos</li>
+              <li><strong>Preview Deployments:</strong> Vista previa automática de cambios en ramas</li>
+            </ul>
+          </p>
+        </section>
+
+        <section>
           <h2 style={sectionHeadingStyle}>Lecciones Aprendidas y Próximos Pasos</h2>
           <h3 style={subHeadingStyle}>Mejores Prácticas Adoptadas</h3>
           <p style={paragraphStyle}>A lo largo del desarrollo se establecieron convenciones importantes:
@@ -448,16 +609,43 @@ export default function Bitacora() {
               <li><strong>File Organization:</strong> Estructura de carpetas clara y predecible</li>
               <li><strong>Component Design:</strong> Principio de responsabilidad única para cada componente</li>
               <li><strong>Code Documentation:</strong> Comentarios significativos y documentación en bitácora</li>
+              <li><strong>Reusability First:</strong> Diseño de componentes pensando en reutilización desde el inicio</li>
+              <li><strong>Theme Integration:</strong> Todos los componentes nuevos integrados con el sistema de temas</li>
             </ul>
           </p>
 
-          <h3 style={subHeadingStyle}>Áreas de Mejora Identificadas</h3>
-          <p style={paragraphStyle}>Se identificaron oportunidades de optimización para futuras iteraciones:
+          <h3 style={subHeadingStyle}>Evolución del Proyecto: TP1 → TP2 → TP3</h3>
+          <p style={paragraphStyle}>Transformación progresiva del proyecto:
             <ul>
-              <li><strong>Performance Optimization:</strong> Implementación de lazy loading y code splitting</li>
-              <li><strong>Accessibility:</strong> Mejora en ARIA labels y navegación por teclado</li>
-              <li><strong>Testing:</strong> Implementación de tests unitarios y de integración</li>
-              <li><strong>TypeScript:</strong> Migración gradual para mejor type safety</li>
+              <li><strong>TP1 (Sitio Estático):</strong> HTML/CSS/JavaScript básico con páginas separadas</li>
+              <li><strong>TP2 (React SPA):</strong> Migración a React, componentización y routing</li>
+              <li><strong>TP3 (Mejoras y Optimización):</strong> Funcionalidades avanzadas, componentes reutilizables y UX mejorada</li>
+              <li><strong>Aprendizaje Incremental:</strong> Cada etapa construyó sobre las bases de la anterior</li>
+              <li><strong>Crecimiento Técnico:</strong> Evolución desde desarrollo web básico a aplicaciones React modernas</li>
+            </ul>
+          </p>
+
+          <h3 style={subHeadingStyle}>Impacto de las Mejoras del TP3</h3>
+          <p style={paragraphStyle}>Beneficios tangibles de las implementaciones:
+            <ul>
+              <li><strong>Mejor UX:</strong> Búsqueda, filtrado y animaciones mejoran la interacción del usuario</li>
+              <li><strong>Código Más Limpio:</strong> Componentes reutilizables reducen duplicación</li>
+              <li><strong>Mantenibilidad:</strong> Arquitectura modular facilita futuras modificaciones</li>
+              <li><strong>Profesionalismo:</strong> Interfaz más pulida y moderna</li>
+              <li><strong>Performance:</strong> Optimizaciones mejoran la velocidad de carga y respuesta</li>
+            </ul>
+          </p>
+
+          <h3 style={subHeadingStyle}>Áreas de Mejora Futuras</h3>
+          <p style={paragraphStyle}>Oportunidades identificadas para continuar evolucionando:
+            <ul>
+              <li><strong>Testing Automatizado:</strong> Implementación de tests unitarios y de integración con Jest y React Testing Library</li>
+              <li><strong>TypeScript Migration:</strong> Migración gradual para type safety y mejor developer experience</li>
+              <li><strong>State Management Avanzado:</strong> Considerar Redux o Zustand para gestión de estado más compleja</li>
+              <li><strong>Performance Monitoring:</strong> Implementación de herramientas de análisis de performance</li>
+              <li><strong>Accessibility Audit:</strong> Auditoría completa de accesibilidad con herramientas automatizadas</li>
+              <li><strong>SEO Optimization:</strong> Mejoras en meta tags y estructura para mejor posicionamiento</li>
+              <li><strong>Progressive Web App:</strong> Conversión a PWA con service workers y funcionalidad offline</li>
             </ul>
           </p>
 
@@ -470,22 +658,28 @@ export default function Bitacora() {
               <li><strong>Responsive Zoom:</strong> Adaptación automática de controles según el dispositivo</li>
               <li><strong>Reset Functionality:</strong> Botones y gestos para resetear vista a estado original</li>
               <li><strong>Library Integration:</strong> Uso estratégico de react-zoom-pan-pinch para funcionalidad robusta</li>
+              <li><strong>SearchBar Universal:</strong> Búsqueda unificada en diferentes contextos del sitio</li>
+              <li><strong>Visual Feedback:</strong> Animaciones y transiciones que guían al usuario</li>
             </ul>
           </p>
 
-          <h3 style={subHeadingStyle}>Preparación para TP3</h3>
-          <p style={paragraphStyle}>La base establecida en TP2 facilita la evolución hacia TP3:
-            <ul>
-              <li><strong>Arquitectura Escalable:</strong> Estructura modular preparada para nuevas funcionalidades</li>
-              <li><strong>State Management:</strong> Context API puede extenderse para gestión de estado más compleja</li>
-              <li><strong>Component Library:</strong> Base de componentes reutilizables para futuras páginas</li>
-              <li><strong>Design System:</strong> Variables CSS establecen fundamentos para sistema de diseño consistente</li>
-            </ul>
+          <h3 style={subHeadingStyle}>Reflexión Final</h3>
+          <p style={paragraphStyle}>
+            El desarrollo del TP3 consolidó los conocimientos adquiridos en los trabajos anteriores y
+            permitió explorar técnicas avanzadas de React. La implementación de componentes reutilizables
+            como SearchBar y SkillProgressBar demuestra una comprensión profunda de los principios de
+            componentización y diseño de interfaces modernas.
+          </p>
+          <p style={paragraphStyle}>
+            La integración completa con el sistema de temas, las animaciones controladas con Intersection
+            Observer API, y la optimización general del código reflejan un proyecto maduro y profesional.
+            El equipo Codebolts Six ha logrado transformar un sitio web estático básico en una Single Page
+            Application robusta, escalable y con excelente experiencia de usuario.
           </p>
         </section>
 
       </div>
-      <ScrollToTopBtn/>
+      <ScrollToTopBtn />
       <Footer />
     </>
   );
