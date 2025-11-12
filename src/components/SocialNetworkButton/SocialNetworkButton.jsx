@@ -12,25 +12,21 @@ export default function SocialNetworkButton({ networks }) {
 
   return (
     <div className="SocialButtons">
-      <div className="Space">
-      </div>
-      <a href="https://github.com/CariRodrigues" target="_blank" rel="noopener noreferrer">  
-        <button className="ButtonStyle">
-            <FontAwesomeIcon icon={faGithub} />
-        </button>
-      </a>
-      <a href="" target="_blank" rel="noopener noreferrer">
-        <button className="ButtonStyle">
-            <FontAwesomeIcon icon={faLinkedin} />
-        </button>
-      </a>
-      <a href="https://www.instagram.com/cari_rodriguess" target="_blank" rel="noopener noreferrer">
-        <button className="ButtonStyle">
-            <FontAwesomeIcon icon={faInstagram} />
-        </button>
-      </a>
-      <div className="Space">
-      </div>
-    </div> 
+      <div className="Space" />
+      {Object.entries(networks).map(([name, url]) => (
+        url && (
+          <a
+            key={name}
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="ButtonStyle" title={name}>
+              <FontAwesomeIcon icon={icons[name]} />
+            </button>
+          </a>
+        )
+      ))}
+    </div>
   );
 }

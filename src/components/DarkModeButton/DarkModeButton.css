@@ -17,6 +17,10 @@ body.dark-mode .nav-links a:hover {
   color: var(--hover-color);
 }
 
+body.dark-mode .SocialButtons{
+  background-color: var(--light-background);
+}
+
 #darkModeBtn {
   border: none;
   width: 60px;
